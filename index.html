@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Joyeux Noel</title>
+    </head>
+    <body>
+        <div class="snow">
+           
+        </div>   
+        <header>
+            <h1 id="main-title">Joyeux Noel !</h1>
+        </header>
+        <main>
+        <div class="tree">
+            <!--Sapin de Noël avec des boules-->
+            <div class="star"></div>
+            
+        </div>
+        <button id="voeux-btn" class="cta-button">
+            <img src="gift.png" alt="Cadeau" class="button-icon">
+            <audio id="jingle type="audio/mpeg">
+                <source src="jingle-bells-swinging-jazz-version-273940.mp3" type="audio/mpeg">
+            </audio>
+            <strong>Cliquez ici pour un message magique !</strong>
+        </button>
+        <script>
+            document.getElementById('voeux-btn').addEventListener('click', function () {
+              window.location.href = 'voeux.html'; // Redirection vers la nouvelle page
+            });
+          </script>
+        <div id="messageZone" class="hidden"></div>
+        <script>
+            const button = document.getElementById("magicButton");
+            const messageZone = document.getElementById("magicButton");
+                button.addEventListener("click",function (){messageZone.textContent = "Joyeux Noel à vous!"
+                    messageZone.classList.remove("hidden")
+                    messageZone.classList.add("visible")
+                });
+        </script>
+        </main>
+    </body>
+</html>
